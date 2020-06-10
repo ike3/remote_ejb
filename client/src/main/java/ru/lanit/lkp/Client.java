@@ -6,6 +6,8 @@ import java.util.stream.IntStream;
 import javax.naming.*;
 
 public class Client {
+    private static int errorCount = 0;
+
     public static void main(String[] args) throws Exception {
         String path = "ejb:client/client-ejb-9.0.0-SNAPSHOT/ClientBean!ru.lanit.lkp.Server";
         Server server = (Server) buildContext().lookup(path);
@@ -16,7 +18,7 @@ public class Client {
                 try {
                     server.run();
                 } catch (Exception e) {
-                    System.err.println(e.getMessage());
+                    if (errorCount++ % 1000 == 0) System.err.println(errorCount + " error of " + e.getMessage());
                 }
             });
         }
