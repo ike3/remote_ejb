@@ -1,0 +1,49 @@
+            <bindings>
+                <!-- Common -->
+                <object-factory name="java:global/configuration/fz44/common/authenticationConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="enabled" value="false"/>
+                        <property name="application.host.url" value="http://"/>
+                        <property name="authentication.redirect.url" value="http://"/>
+                        <property name="authentication.esia.redirect.url" value="http://"/>
+                        <property name="public.host.url" value="http://"/>
+                        <property name="authentication.chooser.redirect.url" value="http://"/>
+                        <property name="authentication.error.redirect.url" value="http://"/>
+                        <property name="authentication.logout.redirect.url" value="http://"/>
+                        <property name="authentication.esia.error.redirect.url" value="http://"/>
+                        <property name="authentication.esia.logout.redirect.url" value="http://"/>
+                        <property name="hazelcast.address" value="localhost"/>
+                        <property name="hazelcast.map.name" value="fz44_auth"/>
+                        <property name="enable.united.record" value="false"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/configuration/fz44/common/publicationConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory"/>
+                <object-factory name="java:global/configuration/fz44/common/commonConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory"/>
+                <object-factory name="java:global/configuration/fz44/common/securityConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="password.encoding.method" value="GOST"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/configuration/fz44/common/asyncJobConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory"/>
+                <object-factory name="java:global/configuration/fz44/common/importRouteInfoConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory"/>
+                <object-factory name="java:global/configuration/fz44/common/fileStoreHashConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory"/>
+                <object-factory name="java:global/configuration/fz44/common/cryptoClient" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="cryptoJsonRpcServiceUrl" value="http://192.168.231.18:8080/crypto/"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/configuration/fz44/common/cryptoHashClient" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="cryptoHashJsonRpcServiceUrl" value="http://192.168.231.18:8080/crypto-hash/"/>
+                    </environment>
+                </object-factory>
+                <simple name="java:global/cryptoClientConsulPath" value="fz44/common/cryptoClient"/>
+                <simple name="java:global/cryptoHashClientConsulPath" value="fz44/common/cryptoHashClient"/>
+                <object-factory name="java:global/configuration/fz44/common/userControlConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="mode" value="full"/>
+                        <property name="reverseModeTimeout" value="3000"/>
+                        <property name="execTimeout" value="10000"/>
+                    </environment>
+                </object-factory>
+            </bindings>

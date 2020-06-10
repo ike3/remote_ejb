@@ -1,0 +1,3 @@
+<outbound-socket-binding name="remote-ejb-test">
+    <remote-destination host="${REMOTE_EJB_HOST_TEST}" port="${REMOTE_EJB_PORT_TEST}"/>
+</outbound-socket-binding>

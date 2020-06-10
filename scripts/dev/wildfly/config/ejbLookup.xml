@@ -1,0 +1,59 @@
+<lookup name="java:global/ejb/UserFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/UserFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.UserFacade"/>
+<lookup name="java:global/ejb/SystemConfigFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/SystemConfigFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.SystemConfigFacade"/>
+<lookup name="java:global/ejb/PrivilegeFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/PrivilegeFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.PrivilegeFacade"/>
+<lookup name="java:global/ejb/AgreementRequirementsFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/AgreementRequirementsFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.AgreementRequirementsFacade"/>
+<lookup name="java:global/ejb/BudgetFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/BudgetFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.BudgetFacade"/>
+<lookup name="java:global/ejb/ApproveCycleAccessFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/ApproveCycleAccessFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.ApproveCycleAccessFacade"/>
+<lookup name="java:global/ejb/MailMessageFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/MailMessageFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.MailMessageFacade"/>
+<lookup name="java:global/ejb/CryptoPluginStatisticsFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/CryptoPluginStatisticsFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.CryptoPluginStatisticsFacade"/>
+<lookup name="java:global/ejb/RegistrationRequestFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/RegistrationRequestFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.RegistrationRequestFacade"/>
+<lookup name="java:global/ejb/EtpFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/EtpFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.EtpFacade"/>
+<lookup name="java:global/ejb/VsrzFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/VsrzFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.VsrzFacade"/>
+<lookup name="java:global/ejb/AccountFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/AccountFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.AccountFacade"/>
+<lookup name="java:global/ejb/WorkDaysFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/WorkDaysFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.WorkDaysFacade"/>
+<lookup name="java:global/ejb/SiteAlertFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/SiteAlertFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.SiteAlertFacade"/>
+<lookup name="java:global/ejb/OrganizationFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/OrganizationFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.OrganizationFacade"/>
+<lookup name="java:global/ejb/OrganizationLinkFacade" lookup="ejb:fz44-ppa-ear/fz44-ppa-facade-ejb/OrganizationLinkFacadeBean!ru.lanit.fz44.ejb.facade.ppa.api.OrganizationLinkFacade"/>
+
+<lookup name="java:global/ejb/EgrulRemote" lookup="ejb:${PPA_REMOTE_EJB_APP_EGRUL}/EgrulBean!ru.lanit.egrul.api.EgrulRemote"/>
+<lookup name="java:global/ejb/EgripRemote" lookup="ejb:${PPA_REMOTE_EJB_APP_EGRIP}/EgripBean!ru.lanit.egrip.api.EgripRemote"/>
+
+<lookup name="java:global/ejb/InfoSystemFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_RIS}/InfoSystemFacadeBean!ru.lanit.fz44.ejb.facade.ris.api.InfoSystemFacade"/>
+
+<lookup name="java:global/ejb/ReportRegistryFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_REP}/ReportRegistryFacadeBean!ru.lanit.fz44.ejb.facade.rep.api.ReportRegistryFacade"/>
+
+<lookup name="java:global/ejb/AgencyClause223Service" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/AgencyClause223ServiceBean!ru.lanit.fz44.ejb.service.nsi.api.AgencyClause223Service"/>
+<lookup name="java:global/ejb/OperatorEisService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OperatorEisServiceBean!ru.lanit.fz44.ejb.service.nsi.api.OperatorEisService"/>
+<lookup name="java:global/ejb/OperatorKtruService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OperatorKtruServiceBean!ru.lanit.fz44.ejb.service.nsi.api.OperatorKtruService"/>
+<lookup name="java:global/ejb/RegionalOperatorService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/RegionalOperatorServiceBean!ru.lanit.fz44.ejb.service.nsi.api.RegionalOperatorService"/>
+<lookup name="java:global/ejb/RegionalOperatorTkoService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/RegionalOperatorTkoServiceBean!ru.lanit.fz44.ejb.service.nsi.api.RegionalOperatorTkoService"/>
+<lookup name="java:global/ejb/JuristicKindServiceBean" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/JuristicKindServiceBean!ru.lanit.fz44.ejb.service.nsi.api.JuristicKindService"/>
+<lookup name="java:global/ejb/PpoService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/PpoServiceBean!ru.lanit.fz44.ejb.service.nsi.api.PpoService"/>
+<lookup name="java:global/ejb/OkatoService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OkatoService!ru.lanit.fz44.ejb.service.nsi.api.OkatoService"/>
+<lookup name="java:global/ejb/OkopfService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OkopfServiceBean!ru.lanit.fz44.ejb.service.nsi.api.OkopfService"/>
+<lookup name="java:global/ejb/OkfsService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OkfsService!ru.lanit.fz44.ejb.service.nsi.api.OkfsService"/>
+<lookup name="java:global/ejb/OkopfOldService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OkopfOldServiceBean!ru.lanit.fz44.ejb.service.nsi.api.OkopfOldService"/>
+<lookup name="java:global/ejb/OkatoOktmoLinkService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/OkatoOktmoLinkServiceBean!ru.lanit.fz44.ejb.service.nsi.api.OkatoOktmoLinkService"/>
+<lookup name="java:global/ejb/KladrService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/KladrServiceBean!ru.lanit.fz44.ejb.service.nsi.api.KladrService"/>
+<lookup name="java:global/ejb/BudgetService" lookup="ejb:${PPA_REMOTE_EJB_APP_NSI}/BudgetServiceBean!ru.lanit.fz44.ejb.service.nsi.api.BudgetService"/>
+
+<lookup name="java:global/ejb/RemoteFileUpdater" lookup="ejb:${PPA_REMOTE_EJB_APP_FSTORE}/FileUpdater!ru.lanit.fz44.filestore.ejb.api.RemoteFileUpdater"/>
+
+<lookup name="java:global/ejb/ControlSubjectsFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_PSK}/ControlSubjectsFacadeBean!ru.lanit.fz44.ejb.facade.psk.api.ControlSubjectsFacade"/>
+
+<lookup name="java:global/ejb/CalendarEventTypeFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_CALENDAR/CalendarEventTypeFacadeBean!ru.lanit.fz44.ejb.facade.calendar.api.CalendarEventTypeFacade"/>
+<lookup name="java:global/ejb/CalendarNotifyTypeFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_CALENDAR/CalendarNotifyTypeFacadeBean!ru.lanit.fz44.ejb.facade.calendar.api.CalendarNotifyTypeFacade"/>
+<lookup name="java:global/ejb/CalendarEventPrivilegeFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_CALENDAR/CalendarEventPrivilegeFacadeBean!ru.lanit.fz44.ejb.facade.calendar.api.CalendarEventPrivilegeFacade"/>
+<lookup name="java:global/ejb/CalendarNotifyPrivilegeFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_CALENDAR/CalendarNotifyPrivilegeFacadeBean!ru.lanit.fz44.ejb.facade.calendar.api.CalendarNotifyPrivilegeFacade"/>
+
+<lookup name="java:global/ejb/AgreementFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/AgreementFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.AgreementFacade"/>
+<lookup name="java:global/ejb/DocumentFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/DocumentFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.DocumentFacade"/>
+<lookup name="java:global/ejb/MembersFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/MembersFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.MembersFacade"/>
+<lookup name="java:global/ejb/ResultLogFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/ResultLogFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.ResultLogFacade"/>
+<lookup name="java:global/ejb/RouteFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/RouteFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.RouteFacade"/>
+<lookup name="java:global/ejb/RouteStageFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/RouteStageFacadeBean!ru.lanit.fz44.ejb.facade.routes.api.RouteStageFacade"/>
+
+<lookup name="java:global/ejb/BankGuaranteeFacade" lookup="ejb:${PPA_REMOTE_EJB_APP_ROUTES/BankGuaranteeFacadeBean!ru.lanit.fz44.ejb.facade.bankguarantee.api.BankGuaranteeFacade"/>
+
+<lookup name="java:global/ejb/PropertyServiceBean" lookup="ejb:${PPA_REMOTE_EJB_APP_UC_CONFIG}/PropertyServiceBean!ru.lanit.auth.user.control.config.api.PropertyService"/>
+<lookup name="java:global/ejb/UserControlServiceBean" lookup="ejb:${PPA_REMOTE_EJB_APP_UC_SERVICE}/UserControlServiceBean!ru.lanit.auth.user.control.service.UserControlService"/>

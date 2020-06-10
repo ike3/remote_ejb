@@ -1,0 +1,26 @@
+                <datasource jndi-name="java:jboss/jdbc/monitoringDataSource" pool-name="monitoringDataSource" enabled="true" use-ccm="true" jta="true">
+                    <connection-url>${MONITORING_URL}</connection-url>
+                    <driver>oracle</driver>
+                    <pool>
+                        <min-pool-size>10</min-pool-size>
+                        <max-pool-size>50</max-pool-size>
+                        <prefill>true</prefill>
+                        <use-strict-min>true</use-strict-min>
+                    </pool>
+                    <security>
+                        <user-name>APP_STATS</user-name>
+                        <password>APP_STATS</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker"/>
+                        <stale-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleStaleConnectionChecker"/>
+                        <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleExceptionSorter"/>
+                        <check-valid-connection-sql>SELECT * FROM dual</check-valid-connection-sql>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>30000</background-validation-millis>
+                    </validation>
+                    <timeout>
+                        <query-timeout>30</query-timeout>
+                    </timeout>
+                </datasource>

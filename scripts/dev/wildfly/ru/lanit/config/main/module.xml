@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.5" name="ru.lanit.config" slot="main">
+    <dependencies>
+        <!--<module name="javax.api"/>-->
+        <system export="true">
+            <paths>
+                <path name="javax/naming"/>
+                <path name="javax/naming/directory"/>
+                <path name="javax/naming/event"/>
+                <path name="javax/naming/spi"/>
+            </paths>
+        </system>
+    </dependencies>
+ 
+    <resources>
+        <resource-root path="fz44-config-bindings-factory-OSS-2.0.0-WF.jar"/>
+    </resources>
+</module>

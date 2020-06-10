@@ -1,0 +1,9 @@
+            <logger category="org.apache.tiles.template">
+                <level name="DEBUG"/>
+            </logger>
+            <logger category="org.hibernate.engine.internal.StatisticalLoggingSessionEventListener">
+                <level name="WARN"/>
+            </logger>
+            <logger category="com.arjuna.ats.jta">
+                <level name="ERROR"/>
+            </logger>

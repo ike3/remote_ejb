@@ -1,0 +1,7 @@
+<formatter name="EIS-FORMATTER">
+    <custom-formatter module="ru.lanit.eis.logging" class="ru.lanit.eis.logging.CustomPatternFormatter">
+        <properties>
+            <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p (%t) [%c{1}] [#m] #r#d %s%e%n"/>
+        </properties>
+    </custom-formatter>
+</formatter>

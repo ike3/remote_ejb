@@ -1,0 +1,5 @@
+<security-realm name="ejb-security-realm">
+    <server-identities>
+        <secret value="dGVzdA=="/>
+    </server-identities>
+</security-realm>

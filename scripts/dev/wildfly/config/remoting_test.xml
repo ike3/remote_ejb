@@ -1,0 +1,8 @@
+<outbound-connections>
+    <remote-outbound-connection name="remote-ejb-connection-test" outbound-socket-binding-ref="remote-ejb-test" protocol="http-remoting" security-realm="ejb-security-realm" username="ejb">
+        <properties>
+            <property name="SASL_POLICY_NOANONYMOUS" value="false"/>
+            <property name="SSL_ENABLED" value="false"/>
+        </properties>
+    </remote-outbound-connection>
+</outbound-connections>

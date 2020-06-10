@@ -1,0 +1,4 @@
+            <global-modules>
+                <module name="ru.lanit.config" slot="main"/>
+                <module name="ru.lanit.eis.logging" slot="main" services="true"/>
+            </global-modules>

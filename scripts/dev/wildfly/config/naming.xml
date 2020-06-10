@@ -1,0 +1,12 @@
+                <lookup name="java:global/jdbc/Ppa" lookup="java:/44fz/Ppa"/>
+                <lookup name="java:global/jdbc/Schedule_ex" lookup="java:/jdbc/Schedule_ex"/>
+                <!-- PPA -->
+                <object-factory name="java:global/configuration/fz44/ppa/ppaConfig" module="ru.lanit.config" class="ru.lanit.fz44.config.bindings.ConfigObjectFactory">
+                    <environment>
+                        <property name="ldap.host" value="${PPA_LDAP_HOST}"/>
+                        <property name="ldap.port" value="${PPA_LDAP_PORT}"/>
+                        <property name="ldap.user" value="${PPA_LDAP_USER}"/>
+                        <property name="ldap.pass" value="${PPA_LDAP_PASS}"/>
+                        <property name="ldap.base" value="${PPA_LDAP_BASE}"/>
+                    </environment>
+                </object-factory>

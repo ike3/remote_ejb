@@ -1,0 +1,2 @@
+<managed-executor-service name="wm-test-tp" jndi-name="java:/wm/test-tp" long-running-tasks="true" core-threads="3" max-threads="6" queue-length="10" context-service="default"/>
+<managed-executor-service name="wm-test" jndi-name="java:/wm/test" long-running-tasks="true" core-threads="3" max-threads="6" queue-length="10" context-service="default"/>

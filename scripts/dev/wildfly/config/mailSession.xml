@@ -1,0 +1,3 @@
+            <mail-session name="ppa" jndi-name="java:jboss/mail/Ppa">
+                <smtp-server outbound-socket-binding-ref="mail-smtp-ppa" username="${PPA_SMTP_USER}" password="${PPA_SMTP_PASSWORD}"/>
+            </mail-session>
