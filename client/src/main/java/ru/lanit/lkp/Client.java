@@ -10,8 +10,18 @@ public class Client {
 
     public static void main(String[] args) throws Exception {
         String path = "ejb:client/client-ejb-9.0.0-SNAPSHOT/ClientBean!ru.lanit.lkp.Server";
-        Server server = (Server) buildContext().lookup(path);
+        Server client = (Server) buildContext().lookup(path);
 
+        //while (true) {
+            System.out.println("Calling client...");
+            client.run("something");
+            //client.run("client_error");
+            //client.run("server_error");
+        //    System.out.println("Press ENTER");
+        //    System.in.read();
+        //}
+
+        /*
         for (int i = 0; true; i++) {
             if (i%100 == 0) System.err.println("Iteration " + i);
             IntStream.range(1, 16).parallel().forEach(c -> {
@@ -22,6 +32,7 @@ public class Client {
                 }
             });
         }
+        */
     }
 
     private static Context buildContext() throws NamingException {

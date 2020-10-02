@@ -5,7 +5,7 @@
             <remoting-ejb-receiver outbound-connection-ref="remote-ejb-connection-test"/>
         </ejb-receivers>
         <clusters>
-            <cluster name="ejb" security-realm="ejb-security-realm" username="ejb">
+            <cluster name="ejb" security-realm="ejb-security-realm" username="ejb" connect-timeout="5">
                 <connection-creation-options>
                     <property name="org.xnio.Options.SSL_ENABLED" value="false" />
                     <property name="org.xnio.Options.SASL_POLICY_NOANONYMOUS" value="false" />

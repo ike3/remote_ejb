@@ -4,5 +4,5 @@ import javax.ejb.Remote;
 
 @Remote
 public interface Server {
-    public void run();
+    public void run(String parameter);
 }

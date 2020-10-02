@@ -7,3 +7,15 @@
             <logger category="com.arjuna.ats.jta">
                 <level name="ERROR"/>
             </logger>
+            <logger category="org.jboss.ejb.client" use-parent-handlers="false">
+                <level name="DEBUG"/>
+                <handlers><handler name="EjbClient"/></handlers>
+            </logger>
+            <periodic-rotating-file-handler name="EjbClient" autoflush="true">
+                <formatter>
+                    <named-formatter name="EIS-FORMATTER"/>
+                </formatter>
+                <file relative-to="jboss.server.log.dir" path="ejb-client.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>

@@ -2,8 +2,15 @@ package ru.lanit.lkp;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import java.util.Arrays;
+
+import javax.ejb.*;
+import javax.inject.Inject;
+
+import ru.lanit.lkp.db.SomeDao;
 
 @Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 public class ClientBean implements Server {
     private static int count = 0;
     private static int errorCount = 0;
@@ -12,7 +19,7 @@ public class ClientBean implements Server {
     private Server server;
 
     @Override
-    public void run() {
+    public void run(String parameter) {
         if (count++ % 1000 == 0) System.err.println(count + " calls on " + System.getProperty("jboss.server.name") + ", " + errorCount + " errors");
         try {
             Thread.sleep(1l);
@@ -21,10 +28,24 @@ public class ClientBean implements Server {
         }
 
         try {
-            server.run();
+            server.run(parameter);
         } catch (Exception e) {
             if (errorCount++ % 1000 == 0) System.err.println(errorCount + " error of " + e.getMessage());
         }
+
+        doSomething(parameter);
     }
 
+    @Inject
+    private SomeDao dao;
+
+    private String doSomething(String parameter) {
+        dao.logJournal("Client is doing something with " + parameter);
+
+        if (Arrays.asList("error", "client_error").contains(parameter)) {
+            throw new RuntimeException("Error occured in Client");
+        }
+
+        return "done with " + parameter;
+    }
 }
