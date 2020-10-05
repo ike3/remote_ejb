@@ -16,7 +16,7 @@ public class ServerBean implements Server {
 
     @Override
     public void run(String parameter) {
-        if (count++ % 1000 == 0) System.err.println(count + " calls on " + System.getProperty("jboss.server.name"));
+        if (count++ % Server.LOG_THRESHOLD == 0) System.err.println(count + " calls on " + System.getProperty("jboss.server.name"));
 
         doSomething(parameter);
 

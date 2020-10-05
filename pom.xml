@@ -19,10 +19,12 @@
     </properties>
 
     <modules>
-        <module>client-api</module>
+        <module>common-api</module>
         <module>server-ejb</module>
+        <module>server-web</module>
         <module>server-ear</module>
         <module>client-ejb</module>
+        <module>client-web</module>
         <module>client-ear</module>
     </modules>
 

@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 export FCS_HOME=/mnt/c/Users/ike/Projects/fcs
 export SHARED_LIBS_INPUT=$FCS_HOME/spikes/quartz/shared-lib
@@ -25,11 +25,15 @@ function clear_deployments {
     done
 }
 
-export WF_HOME=$FCS_HOME/wildfly-client
-run
-export WF_HOME=$FCS_HOME/wildfly-client-slave
-run
-export WF_HOME=$FCS_HOME/wildfly-server
-run
-export WF_HOME=$FCS_HOME/wildfly-server-slave
-run
+if [ -f /opt/jboss/wildfly/jboss-modules.jar ]; then
+    run
+else
+    export WF_HOME=$FCS_HOME/wildfly-client
+    run
+    export WF_HOME=$FCS_HOME/wildfly-client-slave
+    run
+    export WF_HOME=$FCS_HOME/wildfly-server
+    run
+    export WF_HOME=$FCS_HOME/wildfly-server-slave
+    run
+fi

@@ -9,17 +9,17 @@ public class Client {
     private static int errorCount = 0;
 
     public static void main(String[] args) throws Exception {
-        String path = "ejb:client/client-ejb-9.0.0-SNAPSHOT/ClientBean!ru.lanit.lkp.Server";
-        Server client = (Server) buildContext().lookup(path);
+        //String clientPath = "ejb:client/client-ejb-9.0.0-SNAPSHOT/ClientBean!ru.lanit.lkp.Server";
+        //Server client = (Server) buildContext().lookup(clientPath);
 
-        //while (true) {
-            System.out.println("Calling client...");
-            client.run("something");
-            //client.run("client_error");
-            //client.run("server_error");
-        //    System.out.println("Press ENTER");
-        //    System.in.read();
-        //}
+        String serverPath = "ejb:server/server-ejb-9.0.0-SNAPSHOT/ServerBean!ru.lanit.lkp.Server";
+        Server server = (Server) buildContext().lookup(serverPath);
+
+        //System.out.println("Calling client...");
+        //client.run("something");
+
+        System.out.println("Calling server...");
+        server.run("something");
 
         /*
         for (int i = 0; true; i++) {

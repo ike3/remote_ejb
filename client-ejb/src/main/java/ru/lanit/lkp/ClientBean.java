@@ -20,7 +20,7 @@ public class ClientBean implements Server {
 
     @Override
     public void run(String parameter) {
-        if (count++ % 1000 == 0) System.err.println(count + " calls on " + System.getProperty("jboss.server.name") + ", " + errorCount + " errors");
+        if (count++ % Server.LOG_THRESHOLD == 0) System.err.println(count + " calls on " + System.getProperty("jboss.server.name") + ", " + errorCount + " errors");
         try {
             Thread.sleep(1l);
         } catch (InterruptedException e) {
@@ -30,7 +30,8 @@ public class ClientBean implements Server {
         try {
             server.run(parameter);
         } catch (Exception e) {
-            if (errorCount++ % 1000 == 0) System.err.println(errorCount + " error of " + e.getMessage());
+            if (errorCount++ % Server.LOG_THRESHOLD == 0) System.err.println(errorCount + " error of " + e.getMessage());
+            if (Server.LOG_THRESHOLD == 1) e.printStackTrace();
         }
 
         doSomething(parameter);
