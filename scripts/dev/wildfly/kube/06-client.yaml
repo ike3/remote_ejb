@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: remote-ejb-transactions-client
+  labels:
+    app: remote-ejb-transactions-client
+    tier: devops
+spec:
+  selector:
+    matchLabels:
+      app: remote-ejb-transactions-client
+      tier: devops
+  replicas: 1
+  template: 
+    metadata:
+      labels:
+        app: remote-ejb-transactions-client
+        tier: devops
+    spec:
+      serviceAccountName: remote-ejb-transactions-service-account
+      containers:
+        - name: remote-ejb-transactions-client
+          image: remote-ejb-transactions-client:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8081

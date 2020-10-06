@@ -7,8 +7,8 @@ if [ -f /opt/jboss/wildfly/jboss-modules.jar ]; then
     export WF_HOME=/opt/jboss/wildfly
     export SHARED_LIBS_INPUT=/opt/docker/shared-lib
     
-    export DB_URL="jdbc:oracle:thin:@172.17.0.1:1521/XE"
-    export REMOTE_EJB_HOST_TEST="172.17.0.1"
+    export DB_URL="jdbc:oracle:thin:@10.98.54.85:1521/XE"
+    export REMOTE_EJB_HOST_TEST="10.106.138.99"
     export REMOTE_EJB_PORT_TEST="8083"
     
     echo "Environment is set for DOCKER mode"
